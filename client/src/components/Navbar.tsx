@@ -18,14 +18,17 @@ export default function Navbar(){
   }, []);
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 bg-gray-200/40 backdrop-blur-md px-6 flex justify-between items-center ${scrolled ? 'bg-black/40 py-2 backdrop-blur-md shadow-2xl' : 'py-4'}`} >
-            <h1 className={`text-blue-950 ${scrolled?'text-7xl':'text-2xl'}`}>Project Nexus</h1>
+            <div className="flex align-items">
+            <img src="../src/assets/logo.png" alt="nexus-logo" width="40px" ></img>
+            <h1 className={`text-black font-bold ${scrolled?'text-7xl':'text-3xl'}`}>Project Nexus</h1>
+            </div>
             <div className="hidden md:flex gap-10 items-center">
                 <ul className="flex gap-10 text-lg font-bold">
                     <li><NavLink className={navLinkClass} to="/">Home</NavLink></li>
                     <li><NavLink className={navLinkClass} to="/upload">Upload Resume</NavLink></li>
                     <li><NavLink className={navLinkClass} to="/dashboard">Dashboard</NavLink></li>
                 </ul>
-                <button className=" bg-white px-2 py-1 rounded-md hover:bg-gray-100 cursor-pointer" type='button'>Logout</button>
+                <button className=" bg-black text-white px-2 py-1 rounded-md hover:bg-gray-100 cursor-pointer" type='button'>Logout</button>
              </div>
             <button
               className="md:hidden text-2xl"
@@ -39,7 +42,7 @@ export default function Navbar(){
                   <NavLink className={navLinkClass} to="/" onClick={()=>setMenuOpen(false)}>Home</NavLink>
                   <NavLink className={navLinkClass} to="/upload" onClick={()=>setMenuOpen(false)}>Upload Resume</NavLink>
                   <NavLink className={navLinkClass} to="/dashboard" onClick={()=>setMenuOpen(false)}>Dashboard</NavLink>
-                  <button className="bg-gray-100 px-4 py-2 rounded-md" type='button'>Logout</button>
+                  <button className="bg-blue-800 px-5 py-3  rounded-md" type='button'>Logout</button>
                 </div>
               )
             }
