@@ -28,7 +28,7 @@ export default function Navbar(){
                     <li><NavLink className={navLinkClass} to="/upload">Upload Resume</NavLink></li>
                     <li><NavLink className={navLinkClass} to="/dashboard">Dashboard</NavLink></li>
                 </ul>
-                <button className=" bg-black text-white px-2 py-1 rounded-md hover:bg-gray-100 cursor-pointer" type='button'>Logout</button>
+                <button className=" border border-blue-600 text-blue-600 px-2 py-1 rounded-md hover:bg-blue-600 hover:text-white cursor-pointer" type='button'>Logout</button>
              </div>
             <button
               className="md:hidden text-2xl"
