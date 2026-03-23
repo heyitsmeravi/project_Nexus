@@ -18,8 +18,8 @@ export default function Navbar(){
   }, []);
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 bg-gray-200/40 backdrop-blur-md px-6 flex justify-between items-center ${scrolled ? 'bg-black/40 py-2 backdrop-blur-md shadow-2xl' : 'py-4'}`} >
-            <div className="flex align-items">
-            <img src="../src/assets/logo.png" alt="nexus-logo" width="40px" ></img>
+            <div className="flex items-center ">
+            <img src="../src/assets/logo.png" alt="nexus-logo" className="w-15 h-15 object-contain mt-1" ></img>
             <h1 className={`text-black font-bold ${scrolled?'text-7xl':'text-3xl'}`}>Project Nexus</h1>
             </div>
             <div className="hidden md:flex gap-10 items-center">
@@ -42,7 +42,7 @@ export default function Navbar(){
                   <NavLink className={navLinkClass} to="/" onClick={()=>setMenuOpen(false)}>Home</NavLink>
                   <NavLink className={navLinkClass} to="/upload" onClick={()=>setMenuOpen(false)}>Upload Resume</NavLink>
                   <NavLink className={navLinkClass} to="/dashboard" onClick={()=>setMenuOpen(false)}>Dashboard</NavLink>
-                  <button className="bg-blue-800 px-5 py-3  rounded-md" type='button'>Logout</button>
+                  <button className="bg-white border border-blue-600 text-blue-500 px-4 py-2  rounded-md hover:bg-blue-600 hover:text-white" type='button'>Logout</button>
                 </div>
               )
             }
